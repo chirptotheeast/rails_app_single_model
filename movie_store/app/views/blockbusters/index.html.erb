@@ -1,0 +1,8 @@
+<h1>Welcome to the Blockbusters Index Page!</h1>
+
+<ol>
+<% @blockbusters.each do |blockbuster|%>
+    <div><li><%= link_to blockbuster.name, blockbuster_path(blockbuster.id)%></li></div>
+    <% end %>
+
+</ol>

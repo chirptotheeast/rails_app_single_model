@@ -1,0 +1,2721 @@
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBlockbusters (20201030160633)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "blockbusters" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "year_released" integer, "award_nominee" boolean, "quote" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201030160633"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-30 16:16:03.370481"], ["updated_at", "2020-10-30 16:16:03.370481"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (6.6ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Platoon"], ["genre", "comedy"], ["year_released", 2010], ["award_nominee", 1], ["quote", "All right, Mr. DeMille, I'm ready for my closeup."], ["created_at", "2020-10-30 16:23:17.449480"], ["updated_at", "2020-10-30 16:23:17.449480"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Usual Suspects"], ["genre", "comedy"], ["year_released", 2010], ["award_nominee", 0], ["quote", "I love the smell of napalm in the morning."], ["created_at", "2020-10-30 16:23:17.463415"], ["updated_at", "2020-10-30 16:23:17.463415"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Pianist"], ["genre", "horror"], ["year_released", 1971], ["award_nominee", 0], ["quote", "You talking to me?"], ["created_at", "2020-10-30 16:23:17.468965"], ["updated_at", "2020-10-30 16:23:17.468965"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Monsters, Inc."], ["genre", "fantasy"], ["year_released", 1986], ["award_nominee", 0], ["quote", "Frankly, my dear, I don’t give a damn."], ["created_at", "2020-10-30 16:23:17.474408"], ["updated_at", "2020-10-30 16:23:17.474408"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Inside Out"], ["genre", "drama"], ["year_released", 2006], ["award_nominee", 0], ["quote", "Fasten your seatbelts. It's going to be a bumpy night."], ["created_at", "2020-10-30 16:23:17.479998"], ["updated_at", "2020-10-30 16:23:17.479998"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Inception"], ["genre", "horror"], ["year_released", 2018], ["award_nominee", 1], ["quote", "I love the smell of napalm in the morning."], ["created_at", "2020-10-30 16:23:17.485136"], ["updated_at", "2020-10-30 16:23:17.485136"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Toy Story 2"], ["genre", "drama"], ["year_released", 1975], ["award_nominee", 1], ["quote", "Frankly, my dear, I don’t give a damn."], ["created_at", "2020-10-30 16:23:17.489924"], ["updated_at", "2020-10-30 16:23:17.489924"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Pianist"], ["genre", "comedy"], ["year_released", 1997], ["award_nominee", 0], ["quote", "Here's looking at you, kid."], ["created_at", "2020-10-30 16:23:17.497225"], ["updated_at", "2020-10-30 16:23:17.497225"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.7ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Million Dollar Baby"], ["genre", "horror"], ["year_released", 2008], ["award_nominee", 1], ["quote", "Frankly, my dear, I don’t give a damn."], ["created_at", "2020-10-30 16:23:17.502510"], ["updated_at", "2020-10-30 16:23:17.502510"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.3ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Lord of the Rings: The Two Towers"], ["genre", "comedy"], ["year_released", 1978], ["award_nominee", 0], ["quote", "Go ahead, make my day."], ["created_at", "2020-10-30 16:23:17.507538"], ["updated_at", "2020-10-30 16:23:17.507538"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.5ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Double Indemnity"], ["genre", "comedy"], ["year_released", 2009], ["award_nominee", 0], ["quote", "Toto, I've got a feeling we're not in Kansas anymore."], ["created_at", "2020-10-30 16:23:17.512299"], ["updated_at", "2020-10-30 16:23:17.512299"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.5ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Intouchables"], ["genre", "drama"], ["year_released", 1974], ["award_nominee", 0], ["quote", "What we've got here is failure to communicate."], ["created_at", "2020-10-30 16:23:17.530448"], ["updated_at", "2020-10-30 16:23:17.530448"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "American Beauty"], ["genre", "comedy"], ["year_released", 1974], ["award_nominee", 1], ["quote", "Frankly, my dear, I don’t give a damn."], ["created_at", "2020-10-30 16:23:17.535181"], ["updated_at", "2020-10-30 16:23:17.535181"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Dark Knight"], ["genre", "comedy"], ["year_released", 2000], ["award_nominee", 0], ["quote", "You talking to me?"], ["created_at", "2020-10-30 16:23:17.539865"], ["updated_at", "2020-10-30 16:23:17.539865"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Once Upon a Time in America"], ["genre", "horror"], ["year_released", 1971], ["award_nominee", 0], ["quote", "May the Force be with you."], ["created_at", "2020-10-30 16:23:17.544334"], ["updated_at", "2020-10-30 16:23:17.544334"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gone Girl"], ["genre", "horror"], ["year_released", 1992], ["award_nominee", 1], ["quote", "Toto, I've got a feeling we're not in Kansas anymore."], ["created_at", "2020-10-30 16:23:17.548792"], ["updated_at", "2020-10-30 16:23:17.548792"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dial M for Murder"], ["genre", "comedy"], ["year_released", 1983], ["award_nominee", 0], ["quote", "Frankly, my dear, I don’t give a damn."], ["created_at", "2020-10-30 16:23:17.555828"], ["updated_at", "2020-10-30 16:23:17.555828"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Dark Knight"], ["genre", "fantasy"], ["year_released", 2007], ["award_nominee", 0], ["quote", "May the Force be with you."], ["created_at", "2020-10-30 16:23:17.559794"], ["updated_at", "2020-10-30 16:23:17.559794"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Oldeuboi"], ["genre", "comedy"], ["year_released", 2014], ["award_nominee", 0], ["quote", "Go ahead, make my day."], ["created_at", "2020-10-30 16:23:17.563576"], ["updated_at", "2020-10-30 16:23:17.563576"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlockbuster Create (0.5ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "award_nominee", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "2001: A Space Odyssey"], ["genre", "drama"], ["year_released", 2010], ["award_nominee", 1], ["quote", "I'm going to make him an offer he can't refuse."], ["created_at", "2020-10-30 16:23:17.568992"], ["updated_at", "2020-10-30 16:23:17.568992"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/candies" for ::1 at 2020-10-30 11:28:10 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/candies"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/home" for ::1 at 2020-10-30 11:28:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-30 11:28:27 -0500
+Processing by BlockbusterController#home as HTML
+  Rendering blockbuster/home.html.erb within layouts/application
+  Rendered blockbuster/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 84)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-10-30 11:28:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbusterController#home as HTML
+  Rendering blockbuster/home.html.erb within layouts/application
+  Rendered blockbuster/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/alyssaeasterly/Flatiron/code/rails_app_single_model/movie_store/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 4788ms
+Built at: 10/30/2020 11:28:34 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 7660ms (Views: 7657.2ms | ActiveRecord: 0.0ms | Allocations: 24854)
+
+
+[Webpacker] Compiled all packs in /Users/alyssaeasterly/Flatiron/code/rails_app_single_model/movie_store/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 3884ms
+Built at: 10/30/2020 11:28:36 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 6361ms (Views: 6356.7ms | ActiveRecord: 0.0ms | Allocations: 6823)
+
+
+Started GET "/about" for ::1 at 2020-10-30 11:33:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbusterController#about as HTML
+  Rendering blockbuster/about.html.erb within layouts/application
+  Rendered blockbuster/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 4906)
+
+
+Started GET "/index" for ::1 at 2020-10-30 11:38:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters" for ::1 at 2020-10-30 11:38:57 -0500
+  
+ActionController::RoutingError (uninitialized constant BlockbustersController
+Did you mean?  BlockbusterController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters" for ::1 at 2020-10-30 11:40:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant BlockbustersController
+Did you mean?  BlockbusterController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters" for ::1 at 2020-10-30 11:41:06 -0500
+  
+ActionController::RoutingError (uninitialized constant BlockbustersController
+Did you mean?  BlockbusterController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters" for ::1 at 2020-10-30 11:41:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant BlockbustersController
+Did you mean?  BlockbusterController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters" for ::1 at 2020-10-30 11:41:46 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#index as HTML
+Completed 406 Not Acceptable in 7ms (ActiveRecord: 0.0ms | Allocations: 2350)
+
+
+  
+ActionController::MissingExactTemplate (BlockbustersController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters" for ::1 at 2020-10-30 11:44:44 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlockbustersController#index as HTML
+Completed 406 Not Acceptable in 26ms (ActiveRecord: 0.0ms | Allocations: 2444)
+
+
+  
+ActionController::MissingExactTemplate (BlockbustersController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/asfasdf" for ::1 at 2020-10-30 11:44:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/asfasdf"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-30 11:45:08 -0500
+  
+ActionController::RoutingError (uninitialized constant BlockbusterController
+Did you mean?  BlockbustersController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/about" for ::1 at 2020-10-30 11:45:19 -0500
+  
+ActionController::RoutingError (uninitialized constant BlockbusterController
+Did you mean?  BlockbustersController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-30 11:45:54 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlockbusterController#home as HTML
+  Rendering blockbuster/home.html.erb within layouts/application
+  Rendered blockbuster/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 202)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 42.0ms | ActiveRecord: 0.0ms | Allocations: 7821)
+
+
+Started GET "/" for ::1 at 2020-10-30 11:48:00 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 202)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 108.2ms | ActiveRecord: 0.0ms | Allocations: 19271)
+
+
+Started GET "/about" for ::1 at 2020-10-30 11:48:06 -0500
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 4190)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 11:52:18 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (1.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 44.8ms | Allocations: 6916)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 175ms (Views: 161.0ms | ActiveRecord: 3.4ms | Allocations: 27238)
+
+
+Started GET "/blockbuster" for ::1 at 2020-10-30 11:57:10 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbuster/%2018" for ::1 at 2020-10-30 11:57:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster/%2018"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbuster/18" for ::1 at 2020-10-30 11:57:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster/18"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbuster/40" for ::1 at 2020-10-30 11:57:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster/40"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbuster/60" for ::1 at 2020-10-30 11:57:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster/60"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbuster/1" for ::1 at 2020-10-30 11:57:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster/1"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" ORDER BY "blockbusters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/blockbuster/20" for ::1 at 2020-10-30 11:58:45 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster/20"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 11:59:45 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1011)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.6ms | Allocations: 9521)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%='Blockster :' @blockbuster.name %>
+
+<%= @blockbuster.genre%>
+<%= @blockbuster.year_released%>
+<%= @blockbuster.award_nominee%>
+<%= @blockbuster.quote%>
+):
+1:    <%='Blockster :' @blockbuster.name %>
+2:    
+3:    <%= @blockbuster.genre%>
+4:    <%= @blockbuster.year_released%>
+5:    <%= @blockbuster.award_nominee%>
+6:    <%= @blockbuster.quote%>
+  
+app/views/blockbusters/show.html.erb:1: syntax error, unexpected tIVAR, expecting ')'
+app/views/blockbusters/show.html.erb:1: syntax error, unexpected tIVAR, expecting ')'
+app/views/blockbusters/show.html.erb:1: syntax error, unexpected tIVAR, expecting ')'
+app/views/blockbusters/show.html.erb:1: syntax error, unexpected tIVAR, expecting ')'
+app/views/blockbusters/show.html.erb:1: syntax error, unexpected tIVAR, expecting ')'
+app/views/blockbusters/show.html.erb:1: syntax error, unexpected tIVAR, expecting ')'
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 12:00:29 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.2ms | Allocations: 8111)
+
+
+Started GET "/blockbuster/20" for ::1 at 2020-10-30 12:01:12 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster/20"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 12:02:09 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 196)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 13.6ms | ActiveRecord: 1.7ms | Allocations: 11577)
+
+
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 12:02:43 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.4ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.4ms | Allocations: 4584)
+
+
+Started GET "/blockbuster/20" for ::1 at 2020-10-30 12:02:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster/20"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbuster/20" for ::1 at 2020-10-30 12:03:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster/20"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbuster" for ::1 at 2020-10-30 13:53:55 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/blockbuster"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters" for ::1 at 2020-10-30 13:54:00 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.7ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 68.8ms | Allocations: 6523)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 114.7ms | ActiveRecord: 2.5ms | Allocations: 11146)
+
+
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 13:54:05 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 38.0ms | ActiveRecord: 0.2ms | Allocations: 4712)
+
+
+Started GET "/blockbuster/20" for ::1 at 2020-10-30 13:54:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.8ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 52.3ms | ActiveRecord: 1.8ms | Allocations: 10633)
+
+
+Started GET "/dkjflsdk" for ::1 at 2020-10-30 13:57:18 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/dkjflsdk"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ksdflsd" for ::1 at 2020-10-30 13:57:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/ksdflsd"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ksdflsd" for ::1 at 2020-10-30 13:57:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ksdflsd"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters" for ::1 at 2020-10-30 13:58:08 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.5ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 6903)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 60.3ms | ActiveRecord: 1.4ms | Allocations: 14784)
+
+
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 13:58:09 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 5355)
+
+
+Started GET "/kfasdlf" for ::1 at 2020-10-30 14:00:08 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/kfasdlf"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters" for ::1 at 2020-10-30 14:00:36 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.6ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 56.7ms | Allocations: 7422)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.7ms | Allocations: 9013)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    2: 
+    3: <ol>
+    4: <% @blockbusters.each do |blockbuster|%>
+    5:     <div><li><%= link_to blockbuster.name blockbuster_path(blockbuster.id)%></li></div>
+    6:     <% end %>
+    7: 
+    8: </ol>
+  
+app/views/blockbusters/index.html.erb:5
+app/views/blockbusters/index.html.erb:4
+Started GET "/blockbusters" for ::1 at 2020-10-30 14:00:56 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1536)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.2ms | Allocations: 6503)
+
+
+Started GET "/blockbusters/9" for ::1 at 2020-10-30 14:00:59 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 0.2ms | Allocations: 5025)
+
+
+Started GET "/blockbusters/3" for ::1 at 2020-10-30 14:01:02 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.2ms | Allocations: 4579)
+
+
+Started GET "/blockbusters/12" for ::1 at 2020-10-30 14:01:05 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 4600)
+
+
+Started GET "/" for ::1 at 2020-10-30 14:05:56 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 4598)
+
+
+Started GET "/" for ::1 at 2020-10-30 14:06:00 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 4008)
+
+
+Started GET "/" for ::1 at 2020-10-30 14:06:02 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 4010)
+
+
+Started GET "/new" for ::1 at 2020-10-30 14:19:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:19:52 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mBlockbuster Load (0.4ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+Completed 404 Not Found in 9ms (ActiveRecord: 2.0ms | Allocations: 2352)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blockbuster with 'id'=new):
+  
+app/controllers/blockbusters_controller.rb:8:in `show'
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:20:12 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1077)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 46.0ms | ActiveRecord: 1.0ms | Allocations: 11744)
+
+
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:21:09 -0500
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 598)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 5567)
+
+
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:21:23 -0500
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 592)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 5552)
+
+
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:21:39 -0500
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 597)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms | Allocations: 5554)
+
+
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:23:04 -0500
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 601)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 5569)
+
+
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:23:32 -0500
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 5568)
+
+
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:30:58 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 438)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 9949)
+
+
+Started POST "/blockbusters" for ::1 at 2020-10-30 14:31:41 -0500
+Processing by BlockbustersController#create as HTML
+  Parameters: {"authenticity_token"=>"QcxqBqOaTJdCahPSBOK5+3k82gUW/hmIPJyCMpV2clU7uBA+5vm+dmUNKGQuRzVzKisvtcckzhFTMlpkPG5Azw==", "blockbuster"=>{"name"=>"Titantic", "genre"=>"aquatic", "year_released"=>"2019", "quote"=>"life under sea"}, "commit"=>"Submit your new movie!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+  [1m[36mBlockbuster Create (2.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-10-30 19:31:41.515584"], ["updated_at", "2020-10-30 19:31:41.515584"]]
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+Redirected to http://localhost:3000/blockbusters/21
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms | Allocations: 2836)
+
+
+Started GET "/blockbusters/21" for ::1 at 2020-10-30 14:31:41 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBlockbuster Load (0.5ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 177)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.5ms | Allocations: 5019)
+
+
+Started GET "/blockbusters/21" for ::1 at 2020-10-30 14:31:50 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.2ms | Allocations: 4567)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 14:32:00 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1594)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms | Allocations: 5765)
+
+
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:37:47 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 289.6ms | Allocations: 199293)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 323ms (Views: 310.3ms | ActiveRecord: 0.0ms | Allocations: 209575)
+
+
+Started POST "/blockbusters" for ::1 at 2020-10-30 14:38:09 -0500
+Processing by BlockbustersController#create as HTML
+  Parameters: {"authenticity_token"=>"LlgeyN7UqscS8FFOd41nwY3+aqkZAJeTYqTCi+z83elULGTwm7dYJjWXavhdKOtJ3umfGcjaQAoNChrdReTvcw==", "blockbuster"=>{"name"=>"Titantic", "genre"=>"aquatic", "year_released"=>"2019", "quote"=>"unda da sea"}, "commit"=>"Submit your new movie!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+  [1m[36mBlockbuster Create (0.9ms)[0m  [1m[32mINSERT INTO "blockbusters" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-10-30 19:38:09.272411"], ["updated_at", "2020-10-30 19:38:09.272411"]]
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+Redirected to http://localhost:3000/blockbusters/22
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms | Allocations: 2659)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 14:38:09 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 5016)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 14:38:19 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (4.6ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1629)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 28.2ms | ActiveRecord: 4.6ms | Allocations: 5801)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 14:40:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 6952)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 1.2ms | Allocations: 11429)
+
+
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:40:35 -0500
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 5067)
+
+
+Started POST "/blockbusters" for ::1 at 2020-10-30 14:40:52 -0500
+Processing by BlockbustersController#create as HTML
+  Parameters: {"authenticity_token"=>"38wBRQepWtmquXAbXtZTa8XFvONmPgmI+zFQAxylZZWluHt9QsqoOI3eS610c9/jltJJU7fk3hGUn4hVtb1XDw==", "blockbuster"=>{"name"=>"Titantic", "genre"=>"aquatic", "year_released"=>"2018", "quote"=>"wooo we are wet "}, "commit"=>"Submit your new movie!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+  [1m[36mBlockbuster Create (0.7ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Titantic"], ["genre", "aquatic"], ["year_released", 2018], ["quote", "wooo we are wet "], ["created_at", "2020-10-30 19:40:52.364831"], ["updated_at", "2020-10-30 19:40:52.364831"]]
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+Redirected to http://localhost:3000/blockbusters/23
+Completed 302 Found in 11ms (ActiveRecord: 4.4ms | Allocations: 2698)
+
+
+Started GET "/blockbusters/23" for ::1 at 2020-10-30 14:40:52 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 135.2ms | ActiveRecord: 0.2ms | Allocations: 4706)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 14:41:04 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1499)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.2ms | Allocations: 5527)
+
+
+Started GET "/blockbusters/new" for ::1 at 2020-10-30 14:43:31 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#new as HTML
+  Rendering blockbusters/new.html.erb within layouts/application
+  Rendered blockbusters/new.html.erb within layouts/application (Duration: 19.3ms | Allocations: 1040)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 42.5ms | ActiveRecord: 1.1ms | Allocations: 13316)
+
+
+Started POST "/blockbusters" for ::1 at 2020-10-30 14:43:49 -0500
+Processing by BlockbustersController#create as HTML
+  Parameters: {"authenticity_token"=>"B6+JI3A3qnJMuQnAPSC8UXt8zp5uG7nA6G2wX7aq9tR92/MbNVRYk2veMnYXhTDZKGs7Lr/BblmHw2gJH7LETg==", "blockbuster"=>{"name"=>"candle burn", "genre"=>"hot", "year_released"=>"2020", "quote"=>"smells like the forest"}, "commit"=>"Submit your new movie!"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+  [1m[36mBlockbuster Create (1.4ms)[0m  [1m[32mINSERT INTO "blockbusters" ("name", "genre", "year_released", "quote", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "candle burn"], ["genre", "hot"], ["year_released", 2020], ["quote", "smells like the forest"], ["created_at", "2020-10-30 19:43:49.660961"], ["updated_at", "2020-10-30 19:43:49.660961"]]
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 3.6ms | Allocations: 102635)
+
+
+  
+NameError (undefined local variable or method `blockbuster' for #<BlockbustersController:0x00007ffb697e11e0>
+Did you mean?  @blockbuster):
+  
+app/controllers/blockbusters_controller.rb:21:in `create'
+Started GET "/blockbusters" for ::1 at 2020-10-30 14:44:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (1.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 7030)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 42.4ms | ActiveRecord: 2.5ms | Allocations: 13932)
+
+
+Started GET "/blockbusters/24" for ::1 at 2020-10-30 14:44:14 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 14.7ms | ActiveRecord: 0.3ms | Allocations: 4704)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:44:31 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 24.8ms | ActiveRecord: 0.2ms | Allocations: 4585)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:45:18 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 195)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 31.6ms | ActiveRecord: 0.2ms | Allocations: 5679)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:45:35 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 5675)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:46:03 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.4ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.4ms | Allocations: 5676)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:47:10 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 681)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 21.7ms | ActiveRecord: 0.2ms | Allocations: 6175)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:47:14 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 165)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 14.3ms | ActiveRecord: 0.1ms | Allocations: 4722)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:47:16 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.4ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 4717)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:47:34 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.2ms | Allocations: 5719)
+
+
+Started GET "/blockbusters/Check%20out%20our%20other%20Movies!" for ::1 at 2020-10-30 14:47:36 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"Check out our other Movies!"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1164)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blockbuster with 'id'=Check out our other Movies!):
+  
+app/controllers/blockbusters_controller.rb:8:in `show'
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:47:38 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 4620)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:49:08 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 5721)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:49:19 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 238)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 20.3ms | ActiveRecord: 0.1ms | Allocations: 5727)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 14:49:27 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1690)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 5861)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 14:49:36 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.8ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1685)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.8ms | Allocations: 6641)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:49:40 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 238)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 4941)
+
+
+Started GET "/blockbusters/1" for ::1 at 2020-10-30 14:49:45 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 53)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 0.2ms | Allocations: 4611)
+
+
+Started GET "/blockbusters/edit" for ::1 at 2020-10-30 14:55:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1915)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blockbuster with 'id'=edit):
+  
+app/controllers/blockbusters_controller.rb:8:in `show'
+Started GET "/blockbusters/21/edit" for ::1 at 2020-10-30 14:55:57 -0500
+Processing by BlockbustersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBlockbuster Load (1.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:25:in `edit'
+  Rendering blockbusters/edit.html.erb within layouts/application
+  Rendered blockbusters/edit.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1356)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 42.9ms | ActiveRecord: 1.2ms | Allocations: 11568)
+
+
+Started PATCH "/blockbusters/21" for ::1 at 2020-10-30 14:56:14 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/blockbusters/21"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters/update" for ::1 at 2020-10-30 15:03:32 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"update"}
+  [1m[36mBlockbuster Load (1.6ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+Completed 404 Not Found in 13ms (ActiveRecord: 1.6ms | Allocations: 1910)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blockbuster with 'id'=update):
+  
+app/controllers/blockbusters_controller.rb:8:in `show'
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 15:03:43 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.4ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 242)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 26.8ms | ActiveRecord: 0.4ms | Allocations: 9819)
+
+
+Started GET "/blockbusters/20/update" for ::1 at 2020-10-30 15:03:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blockbusters/20/update"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters/20/edit" for ::1 at 2020-10-30 15:04:09 -0500
+Processing by BlockbustersController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:25:in `edit'
+  Rendering blockbusters/edit.html.erb within layouts/application
+  Rendered blockbusters/edit.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 0.3ms | Allocations: 5644)
+
+
+Started PATCH "/blockbusters/20" for ::1 at 2020-10-30 15:04:40 -0500
+Processing by BlockbustersController#update as HTML
+  Parameters: {"authenticity_token"=>"UYrMkzyKrA56eq0CN693qZeOkgqOxXQ0+M7NilmY5Jwr/rareele710dlrQdCvshxJlnul8fo62XYBXc8IDWBg==", "blockbuster"=>{"name"=>"2001: A Scooby Odyssey", "genre"=>"drama", "year_released"=>"1984", "quote"=>"Scooby dooby doo"}, "commit"=>"Submit your updated movie!", "id"=>"20"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:29:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:30:in `update'
+  [1m[36mBlockbuster Update (3.1ms)[0m  [1m[33mUPDATE "blockbusters" SET "name" = ?, "year_released" = ?, "award_nominee" = ?, "quote" = ?, "updated_at" = ? WHERE "blockbusters"."id" = ?[0m  [["name", "2001: A Scooby Odyssey"], ["year_released", 1984], ["award_nominee", nil], ["quote", "Scooby dooby doo"], ["updated_at", "2020-10-30 20:04:40.960214"], ["id", 20]]
+  ↳ app/controllers/blockbusters_controller.rb:30:in `update'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:30:in `update'
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 5.2ms | Allocations: 103799)
+
+
+  
+NameError (undefined local variable or method `blockbuster' for #<BlockbustersController:0x00007ffb6da62050>
+Did you mean?  @blockbuster):
+  
+app/controllers/blockbusters_controller.rb:35:in `update'
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 15:05:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.4ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 301)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 15.3ms | ActiveRecord: 1.4ms | Allocations: 13108)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 15:05:47 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.3ms | Allocations: 5884)
+
+
+Started GET "/blockbusters/4" for ::1 at 2020-10-30 15:05:48 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 54)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 4617)
+
+
+Started GET "/blockbusters/sldkfjdls" for ::1 at 2020-10-30 15:06:36 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"sldkfjdls"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1163)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blockbuster with 'id'=sldkfjdls):
+  
+app/controllers/blockbusters_controller.rb:8:in `show'
+Started GET "/klsdjflksdjf" for ::1 at 2020-10-30 15:06:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/klsdjflksdjf"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/klsdjflksdjf" for ::1 at 2020-10-30 15:07:56 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/klsdjflksdjf"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/klsdjflksdjf" for ::1 at 2020-10-30 15:09:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/klsdjflksdjf"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blockbusters/20/edit" for ::1 at 2020-10-30 15:09:51 -0500
+Processing by BlockbustersController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.6ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:25:in `edit'
+  Rendering blockbusters/edit.html.erb within layouts/application
+  Rendered blockbusters/edit.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1370)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 24.2ms | ActiveRecord: 1.5ms | Allocations: 12717)
+
+
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 15:09:56 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.4ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.4ms | Allocations: 5009)
+
+
+Started GET "/blockbusters/20/edit" for ::1 at 2020-10-30 15:09:58 -0500
+Processing by BlockbustersController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:25:in `edit'
+  Rendering blockbusters/edit.html.erb within layouts/application
+  Rendered blockbusters/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1028)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.2ms | Allocations: 5588)
+
+
+Started PATCH "/blockbusters/20" for ::1 at 2020-10-30 15:10:01 -0500
+Processing by BlockbustersController#update as HTML
+  Parameters: {"authenticity_token"=>"YOJpV+AbfQVU45C5U3zZfJhwyt2Tyxlxb7T1WB+CooskkRrGvpAc1yJY6wEQTezFHT7mUb1nwWsmQZLjXGoRzw==", "blockbuster"=>{"name"=>"2001: A Scooby Odyssey", "genre"=>"drama", "year_released"=>"1984", "quote"=>"Scooby dooby doo"}, "commit"=>"Submit your updated movie!", "id"=>"20"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:29:in `update'
+Redirected to http://localhost:3000/blockbusters/20
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1153)
+
+
+Started GET "/blockbusters/20" for ::1 at 2020-10-30 15:10:01 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.2ms | Allocations: 4663)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 15:10:03 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.7ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1707)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.7ms | Allocations: 5873)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:10:10 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.2ms | Allocations: 4647)
+
+
+Started GET "/blockbusters/22/edit" for ::1 at 2020-10-30 15:10:12 -0500
+Processing by BlockbustersController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:25:in `edit'
+  Rendering blockbusters/edit.html.erb within layouts/application
+  Rendered blockbusters/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1008)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.1ms | Allocations: 5560)
+
+
+Started PATCH "/blockbusters/22" for ::1 at 2020-10-30 15:10:44 -0500
+Processing by BlockbustersController#update as HTML
+  Parameters: {"authenticity_token"=>"uuV3Hc05FYy10cw8Be27cxVp1ZKAQ6i95/YFmGqlKEGwZB8Dr+Z6dwMdqUAAgvOQkDXj4e7q4CuPWxbYlGks6g==", "blockbuster"=>{"name"=>"Pups go to Jail", "genre"=>"comedy", "year_released"=>"2020", "quote"=>"a covid jailhouse blues story"}, "commit"=>"Submit your updated movie!", "id"=>"22"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:29:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:30:in `update'
+  [1m[36mBlockbuster Update (2.9ms)[0m  [1m[33mUPDATE "blockbusters" SET "name" = ?, "genre" = ?, "year_released" = ?, "quote" = ?, "updated_at" = ? WHERE "blockbusters"."id" = ?[0m  [["name", "Pups go to Jail"], ["genre", "comedy"], ["year_released", 2020], ["quote", "a covid jailhouse blues story"], ["updated_at", "2020-10-30 20:10:44.088943"], ["id", 22]]
+  ↳ app/controllers/blockbusters_controller.rb:30:in `update'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:30:in `update'
+Redirected to http://localhost:3000/blockbusters/22
+Completed 302 Found in 13ms (ActiveRecord: 4.4ms | Allocations: 3344)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:10:44 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 97)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 4660)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 15:10:52 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1542)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.2ms | Allocations: 5573)
+
+
+Started GET "/blockbusters/21" for ::1 at 2020-10-30 15:10:55 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 4647)
+
+
+Started GET "/blockbusters/21/edit" for ::1 at 2020-10-30 15:10:56 -0500
+Processing by BlockbustersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:25:in `edit'
+  Rendering blockbusters/edit.html.erb within layouts/application
+  Rendered blockbusters/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.2ms | Allocations: 5566)
+
+
+Started PATCH "/blockbusters/21" for ::1 at 2020-10-30 15:11:25 -0500
+Processing by BlockbustersController#update as HTML
+  Parameters: {"authenticity_token"=>"OOqRZgKMZiOvPD6nSK60TRuqrmbt9TrQVPmbF7GXc6I2snVCsn1AHkxFMkyY8NinM1vitUtKvEeKfwmDh01HuA==", "blockbuster"=>{"name"=>"The Incredibles", "genre"=>"adventure", "year_released"=>"2006", "quote"=>"zip zap zoom!"}, "commit"=>"Submit your updated movie!", "id"=>"21"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:29:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:30:in `update'
+  [1m[36mBlockbuster Update (0.5ms)[0m  [1m[33mUPDATE "blockbusters" SET "name" = ?, "genre" = ?, "year_released" = ?, "quote" = ?, "updated_at" = ? WHERE "blockbusters"."id" = ?[0m  [["name", "The Incredibles"], ["genre", "adventure"], ["year_released", 2006], ["quote", "zip zap zoom!"], ["updated_at", "2020-10-30 20:11:25.708193"], ["id", 21]]
+  ↳ app/controllers/blockbusters_controller.rb:30:in `update'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blockbusters_controller.rb:30:in `update'
+Redirected to http://localhost:3000/blockbusters/21
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms | Allocations: 3348)
+
+
+Started GET "/blockbusters/21" for ::1 at 2020-10-30 15:11:25 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 4657)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 15:11:27 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1546)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 5576)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:20:03 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.7ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 12.7ms | ActiveRecord: 0.7ms | Allocations: 10289)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:21:59 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 316)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 23.1ms | ActiveRecord: 0.1ms | Allocations: 5804)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:22:11 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.5ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 368)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 0.5ms | Allocations: 5850)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:22:13 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 4714)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:22:38 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 367)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 5857)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:22:40 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 4715)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:22:41 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 4706)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:23:20 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.5ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 10.9ms | ActiveRecord: 1.0ms | Allocations: 10701)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:23:22 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.2ms | Allocations: 4707)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:23:23 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.2ms | Allocations: 4707)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:23:27 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.1ms | Allocations: 4705)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:23:45 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.6ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 15.0ms | ActiveRecord: 1.1ms | Allocations: 10753)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:23:47 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.3ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.4ms | ActiveRecord: 0.3ms | Allocations: 4703)
+
+
+Started GET "/blockbusters/22" for ::1 at 2020-10-30 15:30:57 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlockbuster Load (0.5ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 396)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 30.2ms | ActiveRecord: 0.5ms | Allocations: 11324)
+
+
+Started DELETE "/blockbusters/22" for ::1 at 2020-10-30 15:30:59 -0500
+Processing by BlockbustersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bMdsliIyFINkwwE8Q9LYs5dy0QFnlwbkcKVpVKn52zwWsxauZ1HmYkOkOoppd1Q7xGUksbZN0X0fC7ECAOHppg==", "id"=>"22"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:39:in `destroy'
+  [1m[36mBlockbuster Destroy (8.7ms)[0m  [1m[31mDELETE FROM "blockbusters" WHERE "blockbusters"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/blockbusters_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/blockbusters
+Completed 302 Found in 13ms (ActiveRecord: 8.8ms | Allocations: 1370)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 15:30:59 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.7ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1677)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.7ms | Allocations: 5854)
+
+
+Started GET "/blockbusters/24" for ::1 at 2020-10-30 15:31:12 -0500
+Processing by BlockbustersController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mBlockbuster Load (0.1ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:8:in `show'
+  Rendering blockbusters/show.html.erb within layouts/application
+  Rendered blockbusters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 4727)
+
+
+Started DELETE "/blockbusters/24" for ::1 at 2020-10-30 15:31:14 -0500
+Processing by BlockbustersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XtiBP0OHfevLatf9iqzrpG0vGAAYFB6dYW3NLB4NyuwkrPsHBuSPCuwN7EugCWcsPjjtsMnOyQQOwxV6txX4dg==", "id"=>"24"}
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters" WHERE "blockbusters"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/blockbusters_controller.rb:39:in `destroy'
+  [1m[36mBlockbuster Destroy (3.9ms)[0m  [1m[31mDELETE FROM "blockbusters" WHERE "blockbusters"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/blockbusters_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/blockbusters
+Completed 302 Found in 7ms (ActiveRecord: 4.1ms | Allocations: 1358)
+
+
+Started GET "/blockbusters" for ::1 at 2020-10-30 15:31:14 -0500
+Processing by BlockbustersController#index as HTML
+  Rendering blockbusters/index.html.erb within layouts/application
+  [1m[36mBlockbuster Load (0.2ms)[0m  [1m[34mSELECT "blockbusters".* FROM "blockbusters"[0m
+  ↳ app/views/blockbusters/index.html.erb:4
+  Rendered blockbusters/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1468)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.2ms | Allocations: 5499)
+
+

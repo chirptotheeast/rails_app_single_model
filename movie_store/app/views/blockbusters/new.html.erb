@@ -1,0 +1,26 @@
+
+
+
+<h3> Create a new Blockbuster movie! </h3>
+
+
+<%= form_for @blockbuster do |f|%>
+         <%=f.label :name%>
+         <%= f.text_field :name%>
+         <br>
+         <br>
+         <%=f.label :genre%>
+         <%= f.text_field :genre%>
+         <br>
+         <br>
+         <%=f.label :year_released%>
+         <%= f.number_field :year_released%>
+         <br>
+         <br>
+         <%=f.label :quote%>
+        <%= f.text_area :quote%>
+        <br>
+        <br>
+        <%= f.submit "Submit your new movie!" %>
+
+   <%end %>

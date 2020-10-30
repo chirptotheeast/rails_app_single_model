@@ -1,0 +1,20 @@
+<h1><%=@blockbuster.name %></h1>
+
+<div>
+<h2>Genre: <%= @blockbuster.genre%></h2>
+</div>
+<div>
+<h2>Year Released: <%= @blockbuster.year_released%></h2>
+</div>
+<div>
+<h2>Award Nominee:<%= @blockbuster.award_nominee%></h2>
+</div>
+<div>
+<h2>Quote:<%= @blockbuster.quote%></h2>
+</div>
+
+<%= link_to 'Edit My Blockbuster!', edit_blockbuster_path%>
+
+<h4><%= link_to 'Check out our other Movies!', blockbusters_path %></h4>
+
+<h5><%= link_to 'Delete this Blockbuster', delete_blockbuster_path, method: "delete" %></h5>
